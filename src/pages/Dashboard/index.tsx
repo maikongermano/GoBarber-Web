@@ -182,7 +182,10 @@ const Dashboard: React.FC = () => {
               <strong>Atendimento a seguir</strong>
               <div>
                 <img
-                  src={nextAppoitment.user.avatar_url}
+                  src={
+                    nextAppoitment.user.avatar_url ||
+                    'https://gravatar.com/avatar/1f3a2926b3ac730ff6c86bfcf98f8338?s=400&d=robohash&r=x'
+                  }
                   alt={nextAppoitment.user.name}
                 />
                 <strong>{nextAppoitment.user.name}</strong>
